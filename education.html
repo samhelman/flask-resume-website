@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Sam Helman - Education</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+    <link rel="ICON" href="./icons/favicon.ico" type="image/ico" />
+  </head>
+  <body onresize="resizeNav()">
+
+    <div id="grey" class="grey"></div>
+
+    <header class="main-header">
+      <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
+      <nav class="nav main-nav">
+        <ul id="nav-bar" class="collapsable">
+          <li><a href="https://samhelman.github.io/">Home</a></li>
+          <li><a href="https://samhelman.github.io/portfolio">Portfolio</a></li>
+          <li><a href="https://samhelman.github.io/experience">Experience</a></li>
+          <li><a href="https://samhelman.github.io/education">Education</a></li>
+          <li><a href="https://samhelman.github.io/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="half-screen school">
+        <div class="school-info">
+          <h1>University of Warwick</h1>
+          <p class="subtitle">
+            BSc (Hons) Physics with Business Studies
+          </p>
+          <p>
+            Excelling in classes from both Physics and Business disciplines has
+            provided me with a keen business acumen, problem solving and critical 
+            thinking skills that will enable me to succeed in a professional web 
+            development workplace.
+          </p>
+        </div>
+      </div>
+      <div class="half-screen warwick-background"></div>
+      <div class="half-screen school">
+        <div class="school-info">
+          <h1>Western University</h1>
+          <p class="subtitle">
+            One Year Foreign Exchange
+          </p>
+          <p>
+            Travelling to Canada and succeeding in a wide variety of classes demonstrates 
+            my dedication, independence and ability to adapt quickly to new environments.
+          </p>
+        </div>
+      </div>
+      <div class="fill-screen western-background"></div>
+    </main>
+
+    <div id="open-image-container" class="open-image-container">
+      <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
+      <div id="profilePic-grid" class="image-grid scroll-snap-parent">
+        <div class="image-container scroll-snap-child">
+          <img class="image" src="./images/pierogi.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="footer">
+        <div class="link-container" id="wide">
+          <a href="https://samhelman.github.io/"><h1>Sam Helman</h1></a>
+        </div>
+        <div class="icons">
+          <a href="https://facebook.com/sam.helman.9/" target="_blank"><img src="./icons/fb.png" width=40px/></a>
+          <a href="https://instagram.com/samhelman/" target="_blank"><img src="./icons/ig.png" width=40px/></a>
+          <a href="https://linkedin.com/in/sam-helman" target="_blank"><img src="./icons/in.png" width=40px/></a>
+          <a href="https://github.com/samhelman/" target="_blank"><img src="./icons/gh.png" width=40px/></a>
+        </div>
+        <a href="https://samhelman.github.io/"><h1 id="narrow">Sam Helman</h1></a>
+      </div>
+    </footer>
+  </body>
+
+  <!--sitewide script. script necessary for whole site.-->
+  <script>
+    //sets the height of the nav bar to auto
+    function openNav() {
+      document.getElementById("nav-bar").style.height = "auto"
+    };
+    //sets the height of the nav bar to zero
+    function closeNav() {
+      document.getElementById("nav-bar").style.height = "0"
+    };
+    //function that toggles the nav bar open/closed
+    function toggleNav() {
+      var height = document.getElementById("nav-bar").clientHeight
+      if (height > 0) {
+        closeNav()
+      } else {
+        openNav()
+      }
+    };
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", toggleNav);
+    
+    //function to automatically show/hide the nav bar on orientation change
+    function resizeNav() {
+      if (window.innerWidth > 600) {
+        document.getElementById("nav-bar").style.height = "auto"
+      } else {
+        document.getElementById("nav-bar").style.height = "0"
+      }
+    }
+  </script>
+</html>

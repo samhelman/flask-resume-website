@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Sam Helman</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+    <link rel="ICON" href="./icons/favicon.ico" type="image/ico" />
+  </head>
+  <body onresize="resizeNav()">
+
+    <header class="main-header">
+      <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
+      <nav class="nav main-nav">
+        <ul id="nav-bar" class="collapsable">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./dev.html">Experience</a></li>
+          <li><a href="./education.html">Education</a></li>
+          <li><a href="./dev.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="fill-screen">
+        <h1>Page Under Development</h1>
+        <p>Check back soon for updates!</p>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="footer">
+        <h1 id="wide">Sam Helman</h1>
+        <div class="icons">
+          <a href="https://facebook.com/sam.helman.9/" target="_blank"><img src="./icons/fb.png" width=40px/></a>
+          <a href="https://instagram.com/samhelman/" target="_blank"><img src="./icons/ig.png" width=40px/></a>
+          <a href="https://linkedin.com/in/sam-helman" target="_blank"><img src="./icons/in.png" width=40px/></a>
+          <a href="https://github.com/samhelman/" target="_blank"><img src="./icons/gh.png" width=40px/></a>
+        </div>
+        <h1 id="narrow">Sam Helman</h1>
+      </div>
+    </footer>
+  </body>
+
+  <!--sitewide script. script necessary for whole site.-->
+  <script>
+    //sets the height of the nav bar to auto
+    function openNav() {
+      document.getElementById("nav-bar").style.height = "auto"
+    };
+    //sets the height of the nav bar to zero
+    function closeNav() {
+      document.getElementById("nav-bar").style.height = "0"
+    };
+    //function that toggles the nav bar open/closed
+    function toggleNav() {
+      var height = document.getElementById("nav-bar").clientHeight
+      if (height > 0) {
+        closeNav()
+      } else {
+        openNav()
+      }
+    };
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", toggleNav);
+    
+    //function to automatically show/hide the nav bar on orientation change
+    function resizeNav() {
+      if (window.innerWidth > 600) {
+        document.getElementById("nav-bar").style.height = "auto"
+      } else {
+        document.getElementById("nav-bar").style.height = "0"
+      }
+    }
+  </script>
+
+  <!--page script only-->
+  <script>
+
+  </script>
+</html>

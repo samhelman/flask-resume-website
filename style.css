@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: rgba(50,50,50,1);
+}
+
+.grey {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.9);
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  z-index: 100;
+}
+
+.main-header {
+  font-size: 1.2em;
+  background-color: white;
+  height: auto;
+  width: 100%;
+}
+
+.nav li {
+  text-align: center;
+}
+
+.nav a {
+  display: list-item;
+  padding: .5em;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgba(210,210,210,.3);
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: lighter;
+  border-bottom: 1px solid rgba(210,210,210,1);
+}
+
+.collapsable {
+  height: 0;
+  overflow: hidden;
+}
+
+main div {
+  padding: 3vh 5vw;
+}
+
+.fill-screen {
+  min-height: 100vh;
+}
+
+.half-screen {
+  min-height: 50vh;
+}
+
+.quarter-screen {
+  min-height: 25vh;
+}
+
+.main-content-title {
+  background: url("./images/background-lightbulb.jpg") no-repeat center right scroll;
+  background-size: cover;
+  padding: 10vh 4vw;
+}
+
+.main-content-title h1 {
+  font-size: 12vw;
+}
+
+.main-content-title p {
+  font-size: 4vw;
+  padding: 0;
+}
+
+main h2 {
+  text-align: center;
+}
+
+main p {
+  font-size: 1.2em;
+  text-align: justify;
+  line-height: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+main ul {
+  list-style-position: inside;
+}
+
+main li {
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.background-image {
+  background: url(./images/pierogi.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.secondary {
+  background-color: rgba(100,100,100,1);
+}
+
+.secondary h1 {
+  color: white;
+}
+
+.secondary h2 {
+  color: white;
+}
+
+.secondary p {
+  color: white;
+}
+
+.secondary li {
+  color: white;
+}
+
+.secondary a {
+  color: white;
+}
+
+.quote-container {
+  padding: 0;
+}
+
+.quote {
+  padding: .5em;
+  border-top: 1px solid rgba(50,50,50,1);
+  border-bottom: 1px solid rgba(50,50,50,1);
+}
+
+.profile-pic-container {
+  padding: 0;
+  position: relative;
+}
+
+.profile-pic {
+  margin: 3vh auto;
+  display: block;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.profile-pic-open {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+}
+
+.open-image {
+  max-width: 99vw;
+  max-height: 99vh;
+  border: 3px solid rgba(50,50,50,1)
+}
+
+.close-icon {
+  position: fixed;
+  right: 0;
+  width: 5vw;
+  max-width: 25px;
+  margin: 3%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 105;
+}
+
+.footer {
+  background-color: rgba(50,50,50,1);
+  padding: 5vh 5vw;
+  display: inline-block;
+  width: 100%;
+}
+
+.footer a h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 5vh;
+  line-height: auto;
+}
+
+.link-container {
+  text-align: center;
+  width: 100%;
+}
+
+#wide {
+  display: none;
+}
+
+#narrow {
+  display: block;
+}
+
+.icons {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.icons img {
+  margin: 10px;
+}
+
+.button {
+  font-size: 1.2em;
+  background-color: seagreen;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.container {
+  padding: 0;
+}
+
+.top-item {
+  padding: .5em 0 .5em 0;
+}
+
+.bottom-item {
+  padding: 1em 0 1em 0;
+}
+
+.preview {
+  max-width: 100%;
+  max-height: 80vh;
+  border: 2px solid white;
+  display: block;
+  margin: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.coming-soon {
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.open-image-container {
+  display: none;
+  width: 95vw;
+  height: 95vh;
+  position: fixed;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(100,100,100,.5);
+  border: 1px solid white;
+  z-index: 101;
+}
+
+.image-grid {
+  display: grid;
+  max-width: 94vw;
+  max-height: 94vh;
+  height: 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.image-container {
+  height: 94vh;
+  max-width: 94vw;
+  max-height: 94vh;
+}
+
+.image {
+  max-width: 92vw;
+  max-height: 92vh;
+  display: block;
+  margin: 2vh auto;
+  position: relative;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-snap-parent {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: center;
+}
+
+.school-info {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+div .subtitle {
+  padding: 0;
+  font-size: 1em;
+  font-style: italic;
+  text-align: left;
+}
+
+.warwick-background {
+  background: url(./images/warwick.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.western-background {
+  background: url(./images/western.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.image-link {
+  display: block;
+  margin: auto;
+}
+
+.image-link-image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.overlay-container {
+  position: relative;
+  padding: 0;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(0,0,0);
+}
+
+.overlay:hover {
+  opacity: .5;
+}
+
+.get-in-touch {
+  top: 44px;
+}
+
+.form-container label {
+  color: white;
+  font-size: 1.2em;
+}
+
+.form-container input {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  border: 1px solid rgba(50,50,50,1);
+  padding: 5px;
+}
+
+.form-container .input {
+  width: 100%;
+}
+
+.form-container textarea {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 200px;
+  height: 30vh;
+  padding: 5px;
+  font-size: 1.2em;
+  border: 1px solid rgba(50,50,50,1);
+}
+
+.form-container .disclaimer {
+  margin: 5px;
+}
+
+.form-container .disclaimer-label {
+  font-size: 0.9em;
+}
+
+.form-container .submit-button {
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+  .footer {
+    display: inline-flex;
+  }
+  .footer a h1 {
+    margin-top: 0;
+  }
+  #wide {
+    display: initial;
+  }
+  #narrow {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .menu-icon {
+      display: none;
+  }
+  .collapsable {
+    height: auto;
+  }
+  .main-header {
+    position: fixed;
+    height: 44px;
+    z-index: 10;
+  }
+  main {
+    position: relative;
+    top: 44px;
+  }
+  .main-nav {
+    font-size: 1em;
+  }
+  .nav li {
+    display: inline;
+  }
+  .nav a {
+    display: inline-block;
+  }
+  .main-content-title {
+    padding: 60vh 4vw;
+  }
+  .main-content-title h1 {
+    font-size: 4em;
+  }
+  .main-content-title p {
+    font-size: 1em;
+  }
+  .profile-pic {
+    width: 8rem;
+  }
+  .quote {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+  main div {
+    padding: 10vh 15vw;
+  }
+  .top {
+    padding-top: 5vh;
+  }
+  main div p {
+    font-size: 1em;
+  }
+  main div li {
+    font-size: 1em;
+  }
+  .main-content-title {
+    background-attachment: fixed;
+  }
+  .button {
+    font-size: 1em;
+  }
+  .container {
+    display: inline-flex;
+    margin-bottom: 1em;
+  }
+  .left-item {
+    padding: 0;
+    margin-right: .5rem;
+    width: 50%;
+  }
+  .right-item {
+    padding: 0;
+    margin-left: .5rem;
+    width: 50%;
+  }
+  .preview {
+    position: relative;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    max-height: 70vh;
+    width: auto;
+    max-width: 100%;
+  }
+  .image-link {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button:hover {
+    background-color: rgba(50,50,50,1);
+    color: white;
+  }
+  .close-icon {
+    width: 3rem;
+    margin: 1rem;
+  }
+  #coming-soon {
+    min-height: 50vh;
+  }
+  .school-info {
+    padding: 0;
+  }
+  .school .subtitle {
+    font-size: .8em;
+  }
+  .footer {
+    position: relative;
+    top: 44px;
+  }
+  .get-in-touch p {
+    text-align: center;
+  }
+  .form-container input {
+    font-size: 1em;
+  }
+  .form-container label {
+    font-size: 1em;
+  }
+  .form-container textarea {
+    font-size: 1em;
+  }
+  .form-container .disclaimer-label {
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .main-content-title {
+    padding: 10vh 4vw;
+  }
+}

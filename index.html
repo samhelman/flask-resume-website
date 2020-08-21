@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Sam Helman - Home</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+    <link rel="ICON" href="./icons/favicon.ico" type="image/ico" />
+  </head>
+  <body onresize="resizeNav()">
+
+    <div id="grey" class="grey"></div>
+
+    <header class="main-header">
+      <img id="toggle" class="menu-icon" src="./icons/menu-icon.svg" alt="Menu" width="50px" height="50px"/>
+      <nav class="nav main-nav">
+        <ul id="nav-bar" class="collapsable">
+          <li><a href="https://samhelman.github.io/">Home</a></li>
+          <li><a href="https://samhelman.github.io/portfolio">Portfolio</a></li>
+          <li><a href="https://samhelman.github.io/experience">Experience</a></li>
+          <li><a href="https://samhelman.github.io/education">Education</a></li>
+          <li><a href="https://samhelman.github.io/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="fill-screen main-content-title">
+        <h1>Sam Helman</h1>
+        <p>Problem Solver, Results Oriented, Self Starter</p>
+      </div>
+      
+      <div class="fill-screen">
+        <div class="profile-pic-container">
+          <img id="profile-pic" class="profile-pic" src="./images/pierogi.jpg" alt="Image of Sam could not be displayed.">
+        </div>
+        <div class="quote-container">
+          <p class="quote">
+            I am a self-taught software developer with seven months' experience, 
+            who invites challenges and loves using code to solve problems.
+            I have a proven ability to learn new skills quickly, 
+            and perform well under pressure and in new environments. 
+            I am looking to pursue a career in web development, with a 
+            particular focus on responsive, mobile-first development. 
+            I am seeking a role within an organisation that I can grow with, 
+            that will challenge me, and will support me in realising 
+            my potential.
+          </p>
+        </div>     
+      </div>  
+    </main>
+
+    <div id="open-image-container" class="open-image-container">
+      <img id="close-icon" class="close-icon" src="./icons/close-white.svg">
+      <div id="profilePic-grid" class="image-grid scroll-snap-parent">
+        <div class="image-container scroll-snap-child">
+          <img class="image" src="./images/pierogi.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="footer">
+        <div class="link-container" id="wide">
+          <a href="https://samhelman.github.io/"><h1>Sam Helman</h1></a>
+        </div>
+        <div class="icons">
+          <a href="https://facebook.com/sam.helman.9/" target="_blank"><img src="./icons/fb.png" width=40px/></a>
+          <a href="https://instagram.com/samhelman/" target="_blank"><img src="./icons/ig.png" width=40px/></a>
+          <a href="https://linkedin.com/in/sam-helman" target="_blank"><img src="./icons/in.png" width=40px/></a>
+          <a href="https://github.com/samhelman/" target="_blank"><img src="./icons/gh.png" width=40px/></a>
+        </div>
+        <a href="https://samhelman.github.io/"><h1 id="narrow">Sam Helman</h1></a>
+      </div>
+    </footer>
+  </body>
+
+  <!--sitewide script. script necessary for whole site.-->
+  <script>
+    //sets the height of the nav bar to auto
+    function openNav() {
+      document.getElementById("nav-bar").style.height = "auto"
+    };
+    //sets the height of the nav bar to zero
+    function closeNav() {
+      document.getElementById("nav-bar").style.height = "0"
+    };
+    //function that toggles the nav bar open/closed
+    function toggleNav() {
+      var height = document.getElementById("nav-bar").clientHeight
+      if (height > 0) {
+        closeNav()
+      } else {
+        openNav()
+      }
+    };
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", toggleNav);
+    
+    //function to automatically show/hide the nav bar on orientation change
+    function resizeNav() {
+      if (window.innerWidth > 600) {
+        document.getElementById("nav-bar").style.height = "auto"
+      } else {
+        document.getElementById("nav-bar").style.height = "0"
+      }
+    }
+  </script>
+
+  <!--page script only-->
+  <script>
+    
+    //opens image, centers, disables scrolling when clicked
+
+    function disableScroll() { 
+      // Get the current page scroll position 
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+      // if any scroll is attempted, set this to the previous value 
+      window.onscroll = function() { 
+        window.scrollTo(scrollLeft, scrollTop); 
+      }; 
+    }  
+
+    function enableScroll() { 
+      window.onscroll = function() {}; 
+    }
+
+    function scrollToCenter(id) {
+      var el = document.getElementById(id);
+      el.scrollIntoView({block: "center"})
+    }
+
+    var grey = document.getElementById("grey")
+    var imageContainer = document.getElementById("open-image-container")
+    var closeIcon = document.getElementById("close-icon")
+
+    function openImageContainer(id, child_id) {
+      imageContainer.style.display = "initial"
+      var el = document.getElementById(child_id)
+      el.style.height = "auto"
+      el.style.overflow = "scroll"
+      el.scrollTo(0,0)
+      grey.style.display = "initial"
+      scrollToCenter(id)
+      disableScroll()
+    }
+
+    function closeImageContainer() {
+      imageContainer.style.display = "none"
+      grey.style.display = "none"
+      //closeGrid("grid")
+      closeGrid("profilePic-grid")
+      enableScroll()
+    }
+
+    function closeGrid(gridId) {
+      var grid = document.getElementById(gridId)
+      grid.style.height = "0"
+      grid.style.overflow = "hidden"
+    }
+
+    //open image event listeners
+    var profilePic = document.getElementById("profile-pic")
+    profilePic.addEventListener("click", function(){openImageContainer("profile-pic", "profilePic-grid")})
+
+    //close image event listeners
+    grey.addEventListener("click", closeImageContainer)
+    closeIcon.addEventListener("click", closeImageContainer)
+  </script>
+</html>
