@@ -70,7 +70,7 @@ main div {
 }
 
 .main-content-title {
-  background: url("./images/background-lightbulb.jpg") no-repeat center right scroll;
+  background: url("background-lightbulb.jpg") no-repeat center right scroll;
   background-size: cover;
   padding: 10vh 4vw;
 }
@@ -107,7 +107,7 @@ main li {
 }
 
 .background-image {
-  background: url(./images/pierogi.jpg) no-repeat center center fixed;
+  background: url("pierogi.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -336,12 +336,12 @@ div .subtitle {
 }
 
 .warwick-background {
-  background: url(./images/warwick.jpg) no-repeat center center fixed;
+  background: url("warwick.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .western-background {
-  background: url(./images/western.jpg) no-repeat center center fixed;
+  background: url("western.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 

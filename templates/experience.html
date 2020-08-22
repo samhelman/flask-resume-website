@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="half-screen">
+  <div class="container">
+    <div class="top-item left-item">
+      <h1>Energuy</h1>
+      <p class="subtitle">
+        Energy Advisor
+      </p>
+      <ul>
+        <li>Led expansion of the company from Ontario to Alberta.</li>
+        <li>Conducted Home Energy Assessments in residential properties.</li>
+        <li>Problem solving every day in homes to accurately model each home.</li>
+        <li>First use of Python code: automated homeowner report email process using Python and Selenium to collect customer data, files and send emails.</li>
+      </ul>
+    </div>
+    <div class="bottom-item right-item">
+      <div class="overlay-container image-link">
+        <img class="image-link-image" src="{{ url_for('static', filename='energuy.jpg') }}" alt="Energuy Logo">
+        <a href="https://www.energuy.ca/" target="_blank"><div class="overlay"></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="half-screen secondary">
+  <div class="container">
+    <div class="top-item left-item">
+      <h1>Willowtree Farm</h1>
+      <p class="subtitle">
+        Kitchen Staff
+      </p>
+      <ul>
+        <li>Developed two mobile apps for use on the farm - WTFMercado and WTFStockTake. Details can be found <a href="./portfolio.html">here</a>.</li>
+        <li>Took on a leadership role in the kitchen, coordinating stock levels of frozen meals.</li>
+        <li>Experience working to tight deadlines and adapting to new challenges presented while managing the processing of sub-standard produce coming back from markets and the farm.</li>
+      </ul>
+    </div>
+    <div class="bottom-item right-item">
+      <div class="overlay-container image-link">
+        <img class="image-link-image" src="{{ url_for('static', filename='willowtree.jpg') }}" alt="Willowtree Logo">
+        <a href="https://www.willowtreefarm.ca/" target="_blank"><div class="overlay"></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}

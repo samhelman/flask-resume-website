@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Sam Helman - {{ title }}</title>
+    <link rel="SHORTCUT ICON" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+    <link rel="ICON" href="{{ url_for('static', filename='favicon.ico') }}" type="image/ico" />
+  </head>
+  <body onresize="resizeNav()">
+
+    <div id="grey" class="grey"></div>
+
+    <header class="main-header">
+      <img id="toggle" class="menu-icon" src="{{ url_for('static', filename='menu-icon.svg') }}" alt="Menu" width="50px" height="50px"/>
+      <nav class="nav main-nav">
+        <ul id="nav-bar" class="collapsable">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+          <li><a href="{{ url_for('experience') }}">Experience</a></li>
+          <li><a href="{{ url_for('education') }}">Education</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block main %}
+      {% endblock %}
+    </main>
+
+    {% block body %}
+    {% endblock %}
+    
+    <footer>
+      <div class="footer">
+        <div class="link-container" id="wide">
+          <a href="{{ url_for('home') }}"><h1>Sam Helman</h1></a>
+        </div>
+        <div class="icons">
+          <a href="https://facebook.com/sam.helman.9/" target="_blank"><img src="{{ url_for('static', filename='fb.png') }}" width=40px/></a>
+          <a href="https://instagram.com/samhelman/" target="_blank"><img src="{{ url_for('static', filename='ig.png') }}" width=40px/></a>
+          <a href="https://linkedin.com/in/sam-helman" target="_blank"><img src="{{ url_for('static', filename='in.png') }}" width=40px/></a>
+          <a href="https://github.com/samhelman/" target="_blank"><img src="{{ url_for('static', filename='gh.png') }}" width=40px/></a>
+        </div>
+        <a href="{{ url_for('home') }}"><h1 id="narrow">Sam Helman</h1></a>
+      </div>
+    </footer>
+  </body>
+
+  <!--sitewide script. script necessary for whole site.-->
+  <script>
+    //sets the height of the nav bar to auto
+    function openNav() {
+      document.getElementById("nav-bar").style.height = "auto"
+    };
+    //sets the height of the nav bar to zero
+    function closeNav() {
+      document.getElementById("nav-bar").style.height = "0"
+    };
+    //function that toggles the nav bar open/closed
+    function toggleNav() {
+      var height = document.getElementById("nav-bar").clientHeight
+      if (height > 0) {
+        closeNav()
+      } else {
+        openNav()
+      }
+    };
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", toggleNav);
+    
+    //function to automatically show/hide the nav bar on orientation change
+    function resizeNav() {
+      if (window.innerWidth > 600) {
+        document.getElementById("nav-bar").style.height = "auto"
+      } else {
+        document.getElementById("nav-bar").style.height = "0"
+      }
+    }
+  </script>
+  {% block pageScript %}
+  {% endblock %}
+</html>

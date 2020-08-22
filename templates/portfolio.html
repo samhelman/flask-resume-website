@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="top">
+  <h2>Portfolio</h2>
+  <p>
+    I have a wealth of experience using a number of different 
+    languages and tools including Python, Javascript, HTML, CSS, 
+    Kivy, Git, Linux and more.
+  </p>
+  <p>
+    Here, you will find a collection of my past projects ranging from
+    static websites to published mobile applications, as well as some 
+    that I have planned for the near future.
+  </p>
+</div>
+
+<!--WTFMercado Content-->
+<div class="secondary">
+  <div class="container">
+    <div class="top-item left-item">
+      <h2>WTFMercado</h2>
+      <p>
+        A mobile application developed to fill the need for Willowtree Farm to 
+        provide groceries for their seasonal workers while they were quarantining 
+        on the property during the Covid-19 pandemic.
+      </p>
+    </div>
+    <div class="bottom-item right-item">
+      <img id="WTFMercado" src="{{ url_for('static', filename='WTFMercado.jpg') }}" class="preview">
+    </div>
+  </div>
+  <a href="https://github.com/samhelman/WTFMercado" target="_blank" class="button left">Find Out More</a>
+</div>
+
+<!--WTFStockTake Content-->
+<div>
+  <div class="container">
+    <div class="top-item left-item">
+      <h2>WTFStockTake</h2>
+      <p>
+        A mobile application initially developed in order to help me track the stock 
+        levels of the frozen meals in the Willowtree Farm production kitchen. It allows 
+        users to add and remove items, update stock levels of each item, and prompts 
+        the user when that item has low stock. The app is now availble to download 
+        from the Play Store 
+        <a href="https://play.google.com/store/apps/details?id=org.helman.wtfstocktake&hl=en" target="_blank">here</a>.
+      </p>
+    </div>
+    <div class="bottom-item right-item">
+      <img id="WTFStockTake" src="{{ url_for('static', filename='WTFStockTake.jpg') }}" class="preview">
+    </div>
+  </div>
+  <a href="https://github.com/samhelman/WTFStockTake" target="_blank" class="button left">Find Out More</a>
+</div>
+
+<!--samhelman.github.io content-->
+<div class="secondary">
+  <div class="container">
+    <div class="top-item left-item">
+      <h2>Resume Website</h2>
+      <p>
+        This website is being developed to serve as an accompaniment to me resume. 
+        I am using this as an opportunity to learn the fundamentals of HTML and CSS, 
+        with a view to using frameworks like Django in the future. I am also using 
+        this as an opportunity to take my first steps with JavaScript.
+      </p>
+    </div>
+    <div class="bottom-item right-item">
+      <img id="resume" src="{{ url_for('static', filename='resume-website.jpg') }}" class="preview">
+    </div>
+  </div>
+  <a href="https://github.com/samhelman/samhelman.github.io" target="_blank" class="button left">Find Out More</a>
+</div>
+
+<div id="coming-soon" class="background-image quarter-screen relative">
+  <h1 class="coming-soon">Coming Soon...</h1>
+</div>
+
+<!--coming soon kimterpreting-->
+<div>
+  <div class="container">
+    <div class="top-item left-item">
+      <h2>Kimterpreting</h2>
+      <p>
+        I intend to compound my learning and new knowledge of mobile first 
+        responsive web development by building a second static HTML website 
+        for commercial use by a self employed BSL interpreter in the UK.
+      </p> 
+    </div>
+    <div class="bottom-item right-item">
+      <img id="kimterpreting" src="{{ url_for('static', filename='kimterpreting.jpg') }}" class="preview">
+    </div>
+  </div>
+</div>
+
+<!--coming soon javascript mr.jack project-->
+<div class="secondary">
+  <div class="container">
+    <div class="top-item left-item">
+      <h2>Mr. Jack Pocket</h2>
+      <p>
+        As an excercise in building a more full knowledge of Javascript, I intend 
+        to combine my passion for programming and board games by replicating a simple 
+        board game in code.
+      </p>
+      <p>
+        The official version of the game can be downloaded 
+        <a href="https://play.google.com/store/apps/details?id=com.meepletouch.mrjackpocket&hl=en" target="_blank">here</a>.
+      </p>
+    </div>
+    <div class="bottom-item right-item">
+      <img id="mr-jack" src="{{ url_for('static', filename='mr-jack.jpg') }}" class="preview">
+    </div>
+  </div>
+</div>
+{% endblock main %}
+{% block body %}
+<div id="open-image-container" class="open-image-container">
+  <img id="close-icon" class="close-icon" src="{{ url_for('static', filename='close-white.svg') }}">
+  <div id="mercado-grid" class="image-grid scroll-snap-parent">
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='WTFMercado.jpg') }}">
+    </div> 
+  </div>
+
+  <div id="stocktake-grid" class="image-grid scroll-snap-parent">
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='WTFStockTake.jpg') }}">
+    </div>
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='WTFStockTake-2.jpg') }}">
+    </div>
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='WTFStockTake-3.jpg') }}">
+    </div>
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='WTFStockTake-4.jpg') }}">
+    </div>
+  </div>
+
+  <div id="resume-grid" class="image-grid scroll-snap-parent">
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='resume-website.jpg') }}">
+    </div>
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='resume-website-2.jpg') }}">
+    </div>
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='resume-website-3.jpg') }}">
+    </div>
+  </div>
+
+  <div id="kim-grid" class="image-grid scroll-snap-parent">
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='kimterpreting.jpg') }}">
+    </div>
+  </div>
+  
+  <div id="jack-grid" class="image-grid scroll-snap-parent">
+    <div class="image-container scroll-snap-child">
+      <img class="image" src="{{ url_for('static', filename='mr-jack.jpg') }}">
+    </div>
+  </div>
+</div>
+{% endblock body %}
+{% block pageScript %}
+<script>
+    
+  //opens image, centers, disables scrolling when clicked
+
+  function disableScroll() { 
+    // Get the current page scroll position 
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+    // if any scroll is attempted, set this to the previous value 
+    window.onscroll = function() { 
+      window.scrollTo(scrollLeft, scrollTop); 
+    }; 
+  }  
+
+  function enableScroll() { 
+    window.onscroll = function() {}; 
+  }
+
+  function scrollToCenter(id) {
+    var el = document.getElementById(id);
+    el.scrollIntoView({block: "center"})
+  }
+
+  var grey = document.getElementById("grey")
+  var imageContainer = document.getElementById("open-image-container")
+  var closeIcon = document.getElementById("close-icon")
+
+  function openImageContainer(id, child_id) {
+    imageContainer.style.display = "initial"
+    var el = document.getElementById(child_id)
+    el.style.height = "auto"
+    el.style.overflow = "scroll"
+    el.scrollTo(0,0)
+    grey.style.display = "initial"
+    scrollToCenter(id)
+    disableScroll()
+  }
+
+  function closeImageContainer() {
+    imageContainer.style.display = "none"
+    grey.style.display = "none"
+    //closeGrid("grid")
+    closeGrid("mercado-grid")
+    closeGrid("stocktake-grid")
+    closeGrid("resume-grid")
+    closeGrid("kim-grid")
+    closeGrid("jack-grid")
+    enableScroll()
+  }
+
+  function closeGrid(gridId) {
+    var grid = document.getElementById(gridId)
+    grid.style.height = "0"
+    grid.style.overflow = "hidden"
+  }
+
+  //open image event listeners
+  var mercado = document.getElementById("WTFMercado")
+  mercado.addEventListener("click", function(){openImageContainer("WTFMercado", "mercado-grid")})
+  var stocktake = document.getElementById("WTFStockTake")
+  stocktake.addEventListener("click", function(){openImageContainer("WTFStockTake", "stocktake-grid")})
+  var resume = document.getElementById("resume")
+  resume.addEventListener("click", function(){openImageContainer("resume", "resume-grid")})
+  var kim = document.getElementById("kimterpreting")
+  kim.addEventListener("click", function(){openImageContainer("kimterpreting", "kim-grid")})
+  var jack = document.getElementById("mr-jack")
+  jack.addEventListener("click", function(){openImageContainer("mr-jack", "jack-grid")})
+
+  //close image event listeners
+  grey.addEventListener("click", closeImageContainer)
+  closeIcon.addEventListener("click", closeImageContainer)
+</script>
+{% endblock pageScript %}
