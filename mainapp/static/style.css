@@ -384,20 +384,21 @@ div .subtitle {
   top: 44px;
 }
 
+fieldset {
+  border: 0px;
+}
+
 .form-container label {
   color: white;
   font-size: 1.2em;
 }
 
-.form-container input {
+.form-container .input {
   margin-top: 5px;
   margin-bottom: 20px;
   font-size: 1.2em;
   border: 1px solid rgba(50,50,50,1);
   padding: 5px;
-}
-
-.form-container .input {
   width: 100%;
 }
 
@@ -414,6 +415,7 @@ div .subtitle {
 
 .form-container .disclaimer {
   margin: 5px;
+  float: left;
 }
 
 .form-container .disclaimer-label {
@@ -425,6 +427,9 @@ div .subtitle {
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 5px;
+  font-size: 1.2em;
+  border: 1px solid rgba(50,50,50,1);
+  padding: 5px;
 }
 
 @media only screen and (min-width: 800px) {

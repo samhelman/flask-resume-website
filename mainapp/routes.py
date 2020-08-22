@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-app = Flask(__name__)
+from flask import render_template
+from mainapp.forms import ContactForm
+from mainapp import app
 
 @app.route('/')
 @app.route('/home')
@@ -16,11 +17,9 @@ def education():
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', title='Contact')
+    form = ContactForm()
+    return render_template('contact.html', title='Contact', form=form)
 
 @app.route('/experience')
 def experience():
     return render_template('experience.html', title='Experience')
-
-if __name__ == '__main__':
-  app.run(debug=True)

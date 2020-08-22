@@ -9,25 +9,30 @@
 </div>
 <div class="form-container secondary">
   <form action="https://formspree.io/mbjzeorv" method="POST">
+    {{ form.hidden_tag() }}
+      
+    {{ form.email.label() }}
+    {{ form.email(class="input", id="email") }}
 
-    <label for="email">Email:</label><br>
-    <input class="input" type="text" id="email" name="Email" required><br>
+    {{ form.subject.label() }}
+    {{ form.subject(class="input", id="subject") }}
 
-    <label for="subject">Subject:</label><br>
-    <input class="input" type="text" id="subject" name="Subject" required><br>
+    {{ form.message.label() }}
+    {{ form.message(class="input", id="message") }}
 
-    <label for="message">Message:</label><br>
-    <textarea type="text" id="message" name="Message" required></textarea><br>
+    <br>
 
+    {{ form.terms(class="disclaimer") }}
     <label class="disclaimer-label">
-      <input class="disclaimer" type=checkbox required value="Test">
       The form is powered by 
       <a href="https://formspree.io/" target="_blank">Formspree</a>. Check here to indicate that you agree to their 
       <a href="https://formspree.io/legal/terms-of-service" target="_blank">Terms of Use</a> and 
       <a href="https://formspree.io/legal/privacy-policy" target="_blank">Privacy Policy</a>.
-    </label><br>
+    </label>
 
-    <input id="submit-button" class="submit-button" type="submit">
+    <br>
+
+    {{ form.submit(class="submit-button") }}
 
   </form>
   
